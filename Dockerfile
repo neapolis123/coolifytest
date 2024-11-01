@@ -7,4 +7,4 @@ COPY requirements.txt .
 COPY m.py .
 
 RUN pip install -r requirements.txt
-CMD [ "python","./m.py" ]
+CMD [ "python","m.py" ]
