@@ -1,7 +1,8 @@
 import psycopg2
 import time
+import os
 
-conn = psycopg2.connect("postgres://postgres:3QUHdz5M0KbCVK68m5lZmMPN0ontmaXIHZL0rTuvjXe2gvryLldXE6z3i1UHySac@rg8wc8so4sc8o44wowwos08g:5432/cars" )
+conn = psycopg2.connect(os.getenv('DATABASE_URL',None))
 
 cur = conn.cursor()
 
